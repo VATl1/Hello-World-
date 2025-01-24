@@ -1,7 +1,14 @@
 # Use `while` loop to calculate the number
 # of digits in a number `n`
 def count_digits(n: int) -> int:
-    pass
+     count = 0
+     if n == 0:  
+        return 1
+    
+     while n > 0:
+        count += 1  
+        n //= 10  
+     return count
 
 
 # Do not change the below's code

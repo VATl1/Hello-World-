@@ -3,7 +3,12 @@
 # HINT:
 # Use while loop to count sum from 0 to n (included)
 def sum_to(n: int) -> int:
-    pass
+    total = 0
+    current = 0
+    while current <= n:
+        total += current
+        current += 1
+    return total
 
 
 # Do not change the below's code

@@ -7,7 +7,12 @@
 #
 # NOTE: use // division to define slice start index
 def middle(s: str, n: int) -> str:
-    pass
+    if n <= 0:
+        return ""
+    start = (len(s) - min(len(s), n)) // 2
+    end = start + min(len(s), n)
+    return s[start:end]
+        
 
 
 # Do not change the below's code

@@ -1,6 +1,5 @@
 def proxy_pop(l: list[int]) -> int:
-    pass
-
+    return l.pop()
 
 # Do not change the below's code
 if __name__ == "__main__":

@@ -5,7 +5,24 @@
 # If argument `reverse` is set to `True`, the function
 # must return a list which contains integers in a range [n; 1]
 def fill(n: int, reverse: bool = False) -> list[int]:
-    pass
+    if not hasattr(fill, "cс"):
+        fill.cс = {}
+    
+    if n not in fill.cс:
+        fill.cс[n] = 0
+    
+    fill.cс[n] += 1
+    
+    if fill.cс[n] % 2 == 0:
+        return list(range(n, 0, -1)) if n > 0 else 0
+    else:
+        return list(range(1, n + 1))
+
+
+
+
+
+
 
 
 # Do not change the below's code

@@ -1,7 +1,7 @@
 import sys
-import os
+from pathlib import Path
 
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+sys.path.append(str(Path(__file__).resolve().parent.parent))
 
 # Import the function `multiply` from `l2_functions` module
 # to make the script work without errors

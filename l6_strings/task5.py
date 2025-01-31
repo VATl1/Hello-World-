@@ -5,10 +5,8 @@
 # 1. has_prefix("apple", "app") -> True
 # 2. has_prefix("apple", "applg") -> False
 def has_prefix(s: str, prefix: str) -> bool:
-    if prefix in s:
-        return True
-    else: 
-        return False
+    return prefix in s
+    
 
 
 # Do not change the below's code

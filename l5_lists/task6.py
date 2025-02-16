@@ -5,13 +5,9 @@
 # If argument `reverse` is set to `True`, the function
 # must return a list which contains integers in a range [n; 1]
 def fill(n: int, reverse: bool = False) -> list[int]:
-    if n == 0:
-        return []
-
-    if not reverse:
-        return list(range(1, n + 1))
-    else:
-        return list(range(1, n + 1))[::-1]
+    if reverse:
+        return list(range(n, 0, -1))
+    return list(range(1, n + 1))
 
 # Do not change the below's code
 if __name__ == "__main__":

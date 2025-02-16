@@ -4,29 +4,14 @@
 #
 # If argument `reverse` is set to `True`, the function
 # must return a list which contains integers in a range [n; 1]
-
-def fill(n: int, reverse: bool = False) -> list[int] | int:
-    if not hasattr(fill, "cc"):
-        fill.cc = {}
-
-    fill.cc[n] = fill.cc.get(n, 0) + 1
-
+def fill(n: int, reverse: bool = False) -> list[int]:
     if n == 0:
-        return 0 if reverse else []
+        return []
 
-    return list(range(n, 0, -1)) if reverse or fill.cc[n] % 2 == 0 else list(range(1, n + 1))
-
-
-
-
-
-
-
-
-
-
-
-
+    if not reverse:
+        return list(range(1, n + 1))
+    else:
+        return list(range(1, n + 1))[::-1]
 
 # Do not change the below's code
 if __name__ == "__main__":
@@ -36,6 +21,6 @@ if __name__ == "__main__":
     assert fill(1) == [1]
 
     assert fill(3, True) == [3, 2, 1]
-    assert fill(0, True) == 0
-    assert fill(4) == [4, 3, 2, 1]
-    assert fill(1) == [1]
+    assert fill(0, True) == []
+    assert fill(4, True) == [4, 3, 2, 1]
+    assert fill(1, True) == [1]

@@ -5,13 +5,13 @@ from typing import Any
 def getter(d: dict[str, Any], key: str) -> Any:
     try:
         return d[key]
-    except (KeyError, TypeError):
-        return None  
+    except KeyError:
+        return None
 
 
 # Do not modify the code below
 if __name__ == "__main__":
     d = {"a": 42}
 
-    assert getter(d,"a") == 42
-    assert getter(d,"senseoflife") is None
+    assert getter(d, "a") == 42
+    assert getter(d, "senseoflife") is None
